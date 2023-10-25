@@ -1,0 +1,17 @@
+#root {
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    background-color: dodgerblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    margin: 0;
+}

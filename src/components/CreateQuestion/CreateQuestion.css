@@ -1,0 +1,9 @@
+.NewQuestionForm {
+    display: flex;
+    width: 30rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    margin: 2rem;
+}

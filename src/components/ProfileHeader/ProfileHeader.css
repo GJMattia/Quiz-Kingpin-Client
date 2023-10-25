@@ -1,0 +1,19 @@
+.ProfileHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    background-color: dodgerblue;
+    margin: 1rem;
+}
+
+
+
+.ProfilePicture {
+    width: 10rem;
+    height: 10rem;
+    background-color: green;
+    border-radius: 5rem;
+    margin: 1rem;
+}

@@ -1,0 +1,59 @@
+.QuizContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50rem;
+    background-color: crimson;
+    margin-bottom: 1rem;
+}
+
+.QuestionContainer {
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 40rem;
+    height: 5rem;
+    background-color: lightseagreen;
+}
+
+.QuestionNumber {
+    border-radius: 5rem;
+    width: 2rem;
+    padding: 1rem;
+    background-color: azure;
+    text-align: center;
+}
+
+.QuestionText {
+    width: 20rem;
+    text-align: center;
+    background-color: bisque;
+}
+
+.Answers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    background-color: lightblue;
+    width: 35rem;
+    margin-bottom: 1rem;
+    ;
+}
+
+.Answer {
+    width: 15rem;
+    height: 8rem;
+    margin: 1rem;
+    text-align: center;
+    background-color: coral;
+}
+
+.Answer:hover {
+    cursor: pointer;
+    background-color: lightyellow;
+}
