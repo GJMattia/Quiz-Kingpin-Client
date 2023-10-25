@@ -1,0 +1,13 @@
+.Questions>li {
+    margin: .5rem;
+}
+
+.QuestionTable {
+
+    text-align: center;
+    background-color: lightblue;
+}
+
+.QuestionTable>thead>tr>th {
+    width: 20rem;
+}

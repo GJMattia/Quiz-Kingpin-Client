@@ -1,44 +1,37 @@
 import './ProfilePage.css';
+import { useState, useEffect } from 'react';
 import ProfileHeader from '../../Components/ProfileHeader/ProfileHeader';
+import ProfileStats from '../../Components/ProfileStats/ProfileStats';
+import ProfileQuestions from '../../Components/ProfileQuestions/ProfileQuestions';
 import CreateQuestion from '../../Components/CreateQuestion/CreateQuestion';
+import * as questionsAPI from '../../../utilities/questions-api';
 
 
 export default function Profile({ user }) {
 
-    function statAverage(array) {
-        let total = 0;
-        for (let i = 0; i < array.length; i++) {
-            total += array[1];
+    const [profileQuestions, setProfileQuestions] = useState([]);
+
+    useEffect(function () {
+        async function getQuestions() {
+            try {
+
+                const questions = await questionsAPI.getAll({ user: user._id });
+                setProfileQuestions(questions);
+            } catch (error) {
+                console.error('Error Fetching Questions', error);
+            }
         }
-        return total / array.length;
-    }
+        getQuestions();
+    }, []);
+
+
 
     return (
         <div className='ProfileDiv'>
             <ProfileHeader user={user} />
-            <div className='ProfileStats'>
-                <h2>Overall Average:</h2>
-                <h2>{statAverage(user.stats)}</h2>
-
-            </div>
-            <div className='ProfileQuestions'>
-                <h3>{user.name}'s questions</h3>
-                <ul className='Questions'>
-                    <li><div className='Question'>
-                        <p>question</p>
-                        <p>Correct %</p>
-                        <button>edit</button>
-                        <button>delete</button>
-                    </div></li>
-                    <li><div className='Question'>
-                        <p>question</p>
-                        <p>Correct %</p>
-                        <button>edit</button>
-                        <button>delete</button>
-                    </div></li>
-                </ul>
-            </div>
-            <CreateQuestion />
+            <ProfileStats user={user} />
+            <ProfileQuestions user={user} profileQuestions={profileQuestions} setProfileQuestions={setProfileQuestions} />
+            <CreateQuestion user={user} />
         </div>
 
     )

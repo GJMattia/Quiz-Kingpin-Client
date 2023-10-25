@@ -1,0 +1,20 @@
+.ProfileStats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+    background-color: lightblue;
+}
+
+.StatsTable {
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem;
+    background-color: lightyellow;
+}
+
+.StatsTable>tbody>tr>td {
+    width: 10rem;
+    background-color: lightskyblue;
+    padding: 1rem;
+}
