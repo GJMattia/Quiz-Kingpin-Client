@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './CreateQuestion.css'
 import * as questionsAPI from '../../../utilities/questions-api';
 

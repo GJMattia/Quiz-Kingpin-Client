@@ -1,0 +1,17 @@
+.GameModes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40rem;
+    background-color: yellow;
+}
+
+.GameMode {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gainsboro;
+    width: 10rem;
+    height: 10rem;
+}
