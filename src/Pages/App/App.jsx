@@ -4,7 +4,8 @@ import { getUser } from '../../../utilities/user-services';
 import AuthPage from '../../Components/Auth/AuthPage/AuthPage';
 import NavBar from '../../Components/NavBar/NavBar';
 import ProfilePage from '../ProfilePage/ProfilePage';
-import PlayPage from '../PlayPage/PlayPage'
+import PlayPage from '../PlayPage/PlayPage';
+import KingpinPage from '../KingpinPage/KingpinPage';
 import './App.css';
 
 
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path='/' element={<ProfilePage user={user} />} />
             <Route path='/play' element={<PlayPage user={user} />} />
+            <Route path='/kingpin' element={<KingpinPage user={user} />} />
           </Routes>
         </> :
         <AuthPage setUser={setUser} />

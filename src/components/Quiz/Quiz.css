@@ -46,14 +46,43 @@
 }
 
 .Answer {
+    cursor: pointer;
     width: 15rem;
     height: 8rem;
     margin: 1rem;
     text-align: center;
-    background-color: coral;
+    background-color: lightgreen;
 }
 
 .Answer:hover {
     cursor: pointer;
     background-color: lightyellow;
+}
+
+.Confirm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    width: 15rem;
+    height: 3rem;
+    margin: 2rem;
+}
+
+.Confirm:hover {
+    cursor: pointer;
+    background-color: lawngreen;
+}
+
+.SelectedAnswer {
+    background-color: rgb(0, 15, 128);
+    color: white;
+}
+
+.Correct {
+    background-color: green;
+}
+
+.Incorrect {
+    background-color: crimson;
 }

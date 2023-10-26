@@ -1,7 +1,7 @@
 import './QuizCategories.css'
 
 
-export default function QuizCategories({ gameMode, setQuestionSet }) {
+export default function QuizCategories({ gameMode, setQuestionSet, quizCategories, setQuizCategories, quiz, setQuiz }) {
 
 
     async function getExternalQuestions(event) {
@@ -11,6 +11,8 @@ export default function QuizCategories({ gameMode, setQuestionSet }) {
             const data = await response.json();
             const questionSet = data.results;
             setQuestionSet(questionSet);
+            setQuizCategories(!quizCategories);
+            setQuiz(!quiz);
         } catch (error) {
             console.error('Error fetching data:', error);
         }

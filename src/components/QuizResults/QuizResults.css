@@ -1,0 +1,16 @@
+.Results {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30rem;
+    height: 20rem;
+    background-color: deeppink;
+    margin: 1rem;
+    color: white;
+}
+
+.Return {
+    background-color: purple;
+    padding: 2rem;
+}
