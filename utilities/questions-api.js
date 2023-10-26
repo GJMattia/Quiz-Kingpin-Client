@@ -9,10 +9,27 @@ export async function getAll() {
 
 export async function createQuestion(questionData) {
     try {
-        console.log(questionData);
         await sendRequest(`${BASE_URL}`, 'POST', questionData);
     } catch (error) {
         console.error('Error creating question:', error);
     };
 };
+
+export async function deleteQuestion(questionID) {
+    try {
+        await sendRequest(`${BASE_URL}/${questionID}`, 'DELETE');
+    } catch (error) {
+        console.error('error deleting note:', error);
+    }
+};
+
+export async function updateQuestion(questionID, questionData) {
+    try {
+        await sendRequest(`${BASE_URL}/${questionID}`, 'PUT', questionData);
+    } catch (error) {
+        console.error('error updating note:', error);
+    }
+};
+
+
 

@@ -8,8 +8,12 @@ import * as questionsAPI from '../../../utilities/questions-api';
 
 
 export default function Profile({ user }) {
-
     const [profileQuestions, setProfileQuestions] = useState([]);
+
+    const [editMode, setEditMode] = useState(false);
+
+    const [editedQuestionData, setEditedQuestionData] = useState({});
+
 
     useEffect(function () {
         async function getQuestions() {
@@ -30,8 +34,8 @@ export default function Profile({ user }) {
         <div className='ProfileDiv'>
             <ProfileHeader user={user} />
             <ProfileStats user={user} />
-            <ProfileQuestions user={user} profileQuestions={profileQuestions} setProfileQuestions={setProfileQuestions} />
-            <CreateQuestion user={user} />
+            <ProfileQuestions user={user} profileQuestions={profileQuestions} setProfileQuestions={setProfileQuestions} setEditMode={setEditMode} editMode={editMode} editedQuestionData={editedQuestionData} setEditedQuestionData={setEditedQuestionData} />
+            <CreateQuestion user={user} setProfileQuestions={setProfileQuestions} setEditMode={setEditMode} editMode={editMode} editedQuestionData={editedQuestionData} setEditedQuestionData={setEditedQuestionData} />
         </div>
 
     )

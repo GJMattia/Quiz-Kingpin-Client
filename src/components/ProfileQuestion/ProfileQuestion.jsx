@@ -1,6 +1,24 @@
+import { useState } from 'react';
 import './ProfileQuestion.css';
+import * as questionsAPI from '../../../utilities/questions-api';
 
-export default function ProfileQuestion({ user, question }) {
+
+export default function ProfileQuestion({ user, question, setProfileQuestions, setEditMode, editMode, editedQuestionData, setEditedQuestionData }) {
+
+    async function handleDelete() {
+        await questionsAPI.deleteQuestion(question._id);
+        const updatedQuestions = await questionsAPI.getAll();
+        setProfileQuestions(updatedQuestions);
+    };
+
+    async function activateEditMode() {
+        setEditMode(!editMode);
+        setEditedQuestionData(question);
+        console.log(editMode);
+        console.log(editedQuestionData)
+    }
+
+
     return (
         <li>
             <table className="QuestionTable">
@@ -20,8 +38,8 @@ export default function ProfileQuestion({ user, question }) {
                         <td>{question.category}</td>
                         <td>{question.correct}</td>
                         <td>{question.incorrect}</td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
+                        <td><button onClick={activateEditMode}>Edit</button></td>
+                        <td><button onClick={handleDelete}>Delete</button></td>
                     </tr>
                 </tbody>
             </table>

@@ -1,10 +1,10 @@
 import './ProfileQuestions.css';
 import ProfileQuestion from '../ProfileQuestion/ProfileQuestion';
 
-export default function ProfileQuestions({ user, profileQuestions, setProfileQuestions }) {
+export default function ProfileQuestions({ user, profileQuestions, setProfileQuestions, setEditMode, editMode, editedQuestionData, setEditedQuestionData }) {
 
     const userProfileQuestions = profileQuestions.map((question, index) => (
-        <ProfileQuestion question={question} index={index} key={index} />
+        <ProfileQuestion question={question} index={index} key={index} setProfileQuestions={setProfileQuestions} setEditMode={setEditMode} editMode={editMode} editedQuestionData={editedQuestionData} setEditedQuestionData={setEditedQuestionData} />
     ));
 
     return (
