@@ -1,8 +1,22 @@
+import { useState } from 'react';
 import './KingpinPage.css';
-export default function () {
+import LeaderboardOptions from '../../Components/LeaderboardOptions/LeaderboardOptions';
+import Leaderboard from '../../Components/Leaderboard/Leaderboard';
+
+
+export default function KingpinPage() {
+
+    const [leaderboard, setLeaderboard] = useState(true);
+
+
+
+
     return (
-        <div className='Leaderboard'>
-            this is where the leaderboard will go
-        </div>
+        <>
+            <h1>Who is the kingpin?</h1>
+            <LeaderboardOptions />
+            {leaderboard && <Leaderboard />}
+
+        </>
     )
-}
+};

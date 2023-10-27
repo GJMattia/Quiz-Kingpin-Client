@@ -1,0 +1,9 @@
+.LeaderboardItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 15rem;
+    background-color: lightblue;
+    margin: 1rem;
+}

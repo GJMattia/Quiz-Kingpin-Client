@@ -1,0 +1,10 @@
+.LeaderboardList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+    width: 20rem;
+    background-color: white;
+}
