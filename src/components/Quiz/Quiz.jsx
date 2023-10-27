@@ -1,8 +1,9 @@
 import './Quiz.css';
 import { useState, useEffect } from 'react';
+import * as resultsAPI from '../../../utilities/results-api';
 
 
-export default function Quiz({ questionSet, score, setScore, quizResults, setQuizResults, quiz, setQuiz }) {
+export default function Quiz({ user, questionSet, score, setScore, quizResults, setQuizResults, quiz, setQuiz }) {
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [answer, setAnswer] = useState(null);
@@ -29,6 +30,18 @@ export default function Quiz({ questionSet, score, setScore, quizResults, setQui
     function shuffleAnswers() {
         setShuffledAnswers(shuffleArray([...questionSet[currentQuestionIndex].incorrect_answers, questionSet[currentQuestionIndex].correct_answer]));
     }
+
+    async function uploadScore() {
+        try {
+            let category = questionSet[0].category;
+            let userID = user._id;
+            await resultsAPI.addExternalScore({ score: score, category: category }, userID)
+        } catch (error) {
+            console.error('error creating note'.error)
+        }
+    };
+
+
 
     function displayAnswers() {
         let answerElements = document.querySelectorAll('.Answer');
@@ -75,8 +88,10 @@ export default function Quiz({ questionSet, score, setScore, quizResults, setQui
 
     function nextQuestion() {
         if (currentQuestionIndex === 4) {
+            uploadScore();
             setQuizResults(!quizResults);
             setQuiz(!quiz);
+
         } else {
             hideAnswers();
             const selectedAnswer = document.querySelector('.SelectedAnswer');

@@ -29,7 +29,6 @@ export default function Profile({ user }) {
     }, []);
 
 
-
     return (
         <div className='ProfileDiv'>
             <ProfileHeader user={user} />

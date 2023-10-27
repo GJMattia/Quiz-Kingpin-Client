@@ -6,7 +6,7 @@ export default function ProfileStats({ user }) {
     function statAverage(array) {
         let total = 0;
         for (let i = 0; i < array.length; i++) {
-            total += array[1];
+            total += array[i];
         }
         return total / array.length;
     }

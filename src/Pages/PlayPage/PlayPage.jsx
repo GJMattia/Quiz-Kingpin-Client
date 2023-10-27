@@ -7,7 +7,7 @@ import QuizResults from '../../Components/QuizResults/QuizResults';
 
 
 
-export default function PlayPage({ user }) {
+export default function PlayPage({ user, quizCompleted, setQuizCompleted }) {
 
     // Component States
     const [gameModesDiv, setGameModesDiv] = useState(true);
@@ -35,7 +35,7 @@ export default function PlayPage({ user }) {
             <h1>hello {user.name}, select a gamemode to get started!</h1>
             {gameModesDiv && <GameModes handleGameMode={handleGameMode} />}
             {quizCategories && <QuizCategories gameMode={gameMode} setQuestionSet={setQuestionSet} quizCategories={quizCategories} setQuizCategories={setQuizCategories} quiz={quiz} setQuiz={setQuiz} />}
-            {quiz && <Quiz questionSet={questionSet} score={score} setScore={setScore} quizResults={quizResults} setQuizResults={setQuizResults} quiz={quiz} setQuiz={setQuiz} />}
+            {quiz && <Quiz user={user} questionSet={questionSet} score={score} setScore={setScore} quizResults={quizResults} setQuizResults={setQuizResults} quiz={quiz} setQuiz={setQuiz} />}
             {quizResults && <QuizResults score={score} />}
         </>
     )
