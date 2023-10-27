@@ -1,14 +1,18 @@
 import './ProfileStats.css';
 
 
-export default function ProfileStats({ user }) {
+export default function ProfileStats({ user, stats, setStats }) {
 
     function statAverage(array) {
+        if (array.length === 0) {
+            return 'Sauce'
+        }
         let total = 0;
         for (let i = 0; i < array.length; i++) {
             total += array[i];
         }
-        return total / array.length;
+        let value = total / array.length;
+        return value.toFixed(2);
     }
 
     return (
@@ -23,19 +27,19 @@ export default function ProfileStats({ user }) {
                 <tbody>
                     <tr>
                         <td>Overall</td>
-                        <td>500%</td>
+                        <td>{statAverage(stats.overall)}%</td>
                     </tr>
                     <tr>
                         <td>Animals</td>
-                        <td>500%</td>
+                        <td>{statAverage(stats.animals)}%</td>
                     </tr>
                     <tr>
                         <td>History</td>
-                        <td>500%</td>
+                        <td>{statAverage(stats.history)}%</td>
                     </tr>
                     <tr>
                         <td>Sports</td>
-                        <td>500%</td>
+                        <td>{statAverage(stats.sports)}%</td>
                     </tr>
                 </tbody>
             </table>
