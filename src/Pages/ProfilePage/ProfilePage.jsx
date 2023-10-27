@@ -10,12 +10,9 @@ import * as statsAPI from '../../../utilities/stats-api';
 
 export default function Profile({ user }) {
 
-    const [profileQuestions, setProfileQuestions] = useState([]);
-
+    const [profileQuestions, setProfileQuestions] = useState(null);
     const [editMode, setEditMode] = useState(false);
-
     const [editedQuestionData, setEditedQuestionData] = useState({});
-
     const [stats, setStats] = useState(null);
 
 
@@ -48,7 +45,7 @@ export default function Profile({ user }) {
         <div className='ProfileDiv'>
             <ProfileHeader user={user} />
             {stats && <ProfileStats user={user} stats={stats} setStats={setStats} />}
-            <ProfileQuestions user={user} profileQuestions={profileQuestions} setProfileQuestions={setProfileQuestions} setEditMode={setEditMode} editMode={editMode} editedQuestionData={editedQuestionData} setEditedQuestionData={setEditedQuestionData} />
+            {profileQuestions && <ProfileQuestions user={user} profileQuestions={profileQuestions} setProfileQuestions={setProfileQuestions} setEditMode={setEditMode} editMode={editMode} editedQuestionData={editedQuestionData} setEditedQuestionData={setEditedQuestionData} />}
             <CreateQuestion user={user} setProfileQuestions={setProfileQuestions} setEditMode={setEditMode} editMode={editMode} editedQuestionData={editedQuestionData} setEditedQuestionData={setEditedQuestionData} />
         </div>
 

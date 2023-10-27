@@ -40,5 +40,20 @@ export async function updateQuestion(questionID, questionData) {
     }
 };
 
+export async function markQuestionCorrect(questionID) {
+    try {
+        await sendRequest(`${BASE_URL}/${questionID}/correct`, 'PUT');
+    } catch (error) {
+        console.error('error updating note:', error);
+    }
+};
+
+export async function markQuestionIncorrect(questionID) {
+    try {
+        await sendRequest(`${BASE_URL}/${questionID}/incorrect`, 'PUT');
+    } catch (error) {
+        console.error('error updating note:', error);
+    }
+};
 
 

@@ -1,9 +1,10 @@
 import './Quiz.css';
 import { useState, useEffect } from 'react';
 import * as statsAPI from '../../../utilities/stats-api';
+import * as questionsAPI from '../../../utilities/questions-api';
 
 
-export default function Quiz({ user, questionSet, score, setScore, quizResults, setQuizResults, quiz, setQuiz }) {
+export default function Quiz({ user, gameMode, questionSet, score, setScore, quizResults, setQuizResults, quiz, setQuiz }) {
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [answer, setAnswer] = useState(null);
@@ -36,6 +37,33 @@ export default function Quiz({ user, questionSet, score, setScore, quizResults, 
             let category = questionSet[0].category;
             let userID = user._id;
             await statsAPI.addExternalScore({ score: score, category: category }, userID)
+        } catch (error) {
+            console.error('error creating note'.error)
+        }
+    };
+
+    async function markQuestionCorrect() {
+        if (gameMode === 1) {
+            return;
+        };
+        try {
+            let questionID = questionSet[currentQuestionIndex]._id;
+            await questionsAPI.markQuestionCorrect(questionID);
+
+        } catch (error) {
+            console.error('error creating note'.error)
+        }
+    };
+
+    async function markQuestionIncorrect() {
+        if (gameMode === 1) {
+            return;
+        };
+        console.log('hello');
+        try {
+            let questionID = questionSet[currentQuestionIndex]._id;
+            await questionsAPI.markQuestionIncorrect(questionID);
+
         } catch (error) {
             console.error('error creating note'.error)
         }
@@ -79,9 +107,10 @@ export default function Quiz({ user, questionSet, score, setScore, quizResults, 
 
         if (answer === questionSet[currentQuestionIndex].correct_answer) {
             setScore(score + 20);
+            markQuestionCorrect();
             console.log('correct');
         } else {
-            setScore(score + 0);
+            markQuestionIncorrect();
             console.log('incorrect');
         }
     }
