@@ -1,6 +1,6 @@
 import './Quiz.css';
 import { useState, useEffect } from 'react';
-import * as resultsAPI from '../../../utilities/results-api';
+import * as statsAPI from '../../../utilities/stats-api';
 
 
 export default function Quiz({ user, questionSet, score, setScore, quizResults, setQuizResults, quiz, setQuiz }) {
@@ -35,7 +35,7 @@ export default function Quiz({ user, questionSet, score, setScore, quizResults, 
         try {
             let category = questionSet[0].category;
             let userID = user._id;
-            await resultsAPI.addExternalScore({ score: score, category: category }, userID)
+            await statsAPI.addExternalScore({ score: score, category: category }, userID)
         } catch (error) {
             console.error('error creating note'.error)
         }

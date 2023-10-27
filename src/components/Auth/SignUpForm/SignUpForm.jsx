@@ -1,5 +1,6 @@
-import { Component } from 'react'
-import { signUp } from '../../../../utilities/user-services'
+import { Component } from 'react';
+import { signUp } from '../../../../utilities/user-services';
+import { createStats } from '../../../../utilities/stats-api';
 
 export default class SignUpForm extends Component {
   state = {
@@ -20,13 +21,14 @@ export default class SignUpForm extends Component {
   handleSubmit = async (evt) => {
     evt.preventDefault()
     try {
-      const formData = {...this.state}
-      
+      const formData = { ...this.state }
+
       delete formData.error
       delete formData.confirm
 
       const user = await signUp(formData)
       this.props.setUser(user)
+      createStats({ userID: user._id });
     } catch (error) {
       this.setState({ error: 'Sign Up Failed - Try Again' })
     }

@@ -1,5 +1,5 @@
 import sendRequest from "./send-request";
-const BASE_URL = 'http://localhost:4741/results';
+const BASE_URL = 'http://localhost:4741/stats';
 
 
 export async function addExternalScore(score, userID) {
@@ -9,4 +9,13 @@ export async function addExternalScore(score, userID) {
     } catch (error) {
         console.error('error updating note:', error);
     }
+};
+
+
+export async function createStats(userID) {
+    try {
+        await sendRequest(`${BASE_URL}`, 'POST', userID);
+    } catch (error) {
+        console.error('Error creating question:', error);
+    };
 };

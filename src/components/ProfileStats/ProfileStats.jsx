@@ -23,19 +23,19 @@ export default function ProfileStats({ user }) {
                 <tbody>
                     <tr>
                         <td>Overall</td>
-                        <td>{statAverage(user.overall)}%</td>
+                        <td>500%</td>
                     </tr>
                     <tr>
                         <td>Animals</td>
-                        <td>{statAverage(user.animals)}%</td>
+                        <td>500%</td>
                     </tr>
                     <tr>
                         <td>History</td>
-                        <td>{statAverage(user.history)}%</td>
+                        <td>500%</td>
                     </tr>
                     <tr>
                         <td>Sports</td>
-                        <td>{statAverage(user.sports)}%</td>
+                        <td>500%</td>
                     </tr>
                 </tbody>
             </table>
