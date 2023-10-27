@@ -1,4 +1,6 @@
-import './QuizCategories.css'
+import './QuizCategories.css';
+import * as questionsAPI from '../../../utilities/questions-api';
+
 
 
 export default function QuizCategories({ gameMode, setQuestionSet, quizCategories, setQuizCategories, quiz, setQuiz }) {
@@ -18,10 +20,19 @@ export default function QuizCategories({ gameMode, setQuestionSet, quizCategorie
         }
     };
 
-    function getUserQuestions() {
-        setQuestionSet('hello');
-        console.log('hello')
+    async function getUserQuestions(event) {
+        try {
+            let category = event.target.innerText;
+            const questionSet = await questionsAPI.getSet(category);
+            console.log(questionSet);
+            setQuestionSet(questionSet);
+            setQuizCategories(!quizCategories);
+            setQuiz(!quiz);
+        } catch (error) {
+            console.error('Error Fetching Questions', error);
+        }
     }
+
 
     return (
         <div className='Categories'>

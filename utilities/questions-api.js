@@ -7,6 +7,15 @@ export async function getAll() {
     return sendRequest(BASE_URL);
 };
 
+
+export async function getSet(category) {
+    console.log(category);
+    return sendRequest(`${BASE_URL}/${category}`);
+};
+
+
+
+
 export async function createQuestion(questionData) {
     try {
         await sendRequest(`${BASE_URL}`, 'POST', questionData);
