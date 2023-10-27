@@ -79,10 +79,12 @@
     color: white;
 }
 
-.Correct {
+#Correct {
+    cursor: not-allowed;
     background-color: green;
 }
 
-.Incorrect {
+#Incorrect {
+    cursor: not-allowed;
     background-color: crimson;
 }
