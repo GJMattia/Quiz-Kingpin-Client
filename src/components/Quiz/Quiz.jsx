@@ -43,33 +43,25 @@ export default function Quiz({ user, gameMode, questionSet, score, setScore, qui
     };
 
     async function markQuestionCorrect() {
-        if (gameMode === 1) {
-            return;
-        };
         try {
             let questionID = questionSet[currentQuestionIndex]._id;
             await questionsAPI.markQuestionCorrect(questionID);
 
         } catch (error) {
-            console.error('error creating note'.error)
+            console.error('error creating note', error)
         }
     };
 
     async function markQuestionIncorrect() {
-        if (gameMode === 1) {
-            return;
-        };
         console.log('hello');
         try {
             let questionID = questionSet[currentQuestionIndex]._id;
             await questionsAPI.markQuestionIncorrect(questionID);
 
         } catch (error) {
-            console.error('error creating note'.error)
+            console.error('error creating note', error)
         }
     };
-
-
 
     function displayAnswers() {
         let answerElements = document.querySelectorAll('.Answer');
@@ -107,11 +99,16 @@ export default function Quiz({ user, gameMode, questionSet, score, setScore, qui
 
         if (answer === questionSet[currentQuestionIndex].correct_answer) {
             setScore(score + 20);
-            markQuestionCorrect();
             console.log('correct');
+            if (gameMode == 0) {
+                markQuestionCorrect();
+            };
         } else {
-            markQuestionIncorrect();
             console.log('incorrect');
+            if (gameMode == 0) {
+                markQuestionIncorrect();
+            };
+
         }
     }
 

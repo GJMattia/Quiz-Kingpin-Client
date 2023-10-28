@@ -1,12 +1,27 @@
-import './LeaderboardOptions.css'
+import './LeaderboardOptions.css';
 
-export default function LeaderboardOptions() {
+
+
+export default function LeaderboardOptions({ category, setCategory, leaderboardData, setLeaderboardData }) {
+
+
+    function categorySelect(event) {
+        const Divs = [...document.querySelectorAll('.LeaderboardOption')];
+        Divs.forEach(function (div) {
+            div.classList.remove('Selected')
+        });
+        let selected = event.target;
+        let category = event.target.innerText.toLowerCase();
+        selected.classList.add('Selected');
+        setCategory(category);
+    };
+
     return (
         <div className='LeaderboardOptionsDiv'>
-            <div className='LeaderboardOption'>Overall</div>
-            <div className='LeaderboardOption'>Animals</div>
-            <div className='LeaderboardOption'>History</div>
-            <div className='LeaderboardOption'>Sports</div>
+            <div onClick={categorySelect} className='LeaderboardOption'>Overall</div>
+            <div onClick={categorySelect} className='LeaderboardOption'>Animals</div>
+            <div onClick={categorySelect} className='LeaderboardOption'>History</div>
+            <div onClick={categorySelect} className='LeaderboardOption'>Sports</div>
         </div>
     )
-}
+};

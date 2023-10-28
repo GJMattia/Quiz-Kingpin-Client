@@ -29,15 +29,15 @@ export default function Profile({ user }) {
     }, []);
 
     useEffect(function () {
-        async function getStats() {
+        async function getUserStats() {
             try {
-                const stats = await statsAPI.getAll({ user: user._id });
+                const stats = await statsAPI.getUserStats({ user: user._id });
                 setStats(stats);
             } catch (error) {
                 console.error('Error Fetching Questions', error);
             }
         }
-        getStats();
+        getUserStats();
     }, []);
 
 

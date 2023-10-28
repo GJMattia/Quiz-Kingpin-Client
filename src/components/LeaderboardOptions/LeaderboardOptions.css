@@ -18,3 +18,7 @@
     cursor: pointer;
     background-color: dodgerblue;
 }
+
+.Selected {
+    background-color: darkorange;
+}
