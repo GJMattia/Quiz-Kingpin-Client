@@ -1,0 +1,9 @@
+.ProfileView {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    background-color: red;
+    padding: 1rem;
+}
