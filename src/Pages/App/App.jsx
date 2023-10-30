@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../../utilities/user-services';
-import AuthPage from '../../Components/Auth/AuthPage/AuthPage';
-import NavBar from '../../Components/NavBar/NavBar';
+import AuthPage from '../../components/Auth/AuthPage/AuthPage';
+import NavBar from '../../components/NavBar/NavBar';
 import ProfilePage from '../ProfilePage/ProfilePage';
 import PlayPage from '../PlayPage/PlayPage';
 import KingpinPage from '../KingpinPage/KingpinPage';
 import AboutPage from '../AboutPage/AboutPage';
-import Footer from '../../Components/Footer/Footer';
+import Footer from '../../components/Footer/Footer';
 import './App.css';
 
 

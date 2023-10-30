@@ -1,5 +1,5 @@
 import './ViewProfile.css';
-import ProfileStats from '../../Components/ProfileStats/ProfileStats';
+import ProfileStats from '../ProfileStats/ProfileStats';
 
 export default function ViewProfile({ stats, setViewProfileDiv }) {
 

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import './KingpinPage.css';
-import LeaderboardOptions from '../../Components/LeaderboardOptions/LeaderboardOptions';
-import Leaderboard from '../../Components/Leaderboard/Leaderboard';
-import ViewProfile from '../../Components/ViewProfile/ViewProfile';
+import LeaderboardOptions from '../../components/LeaderboardOptions/LeaderboardOptions';
+import Leaderboard from '../../components/Leaderboard/Leaderboard';
+import ViewProfile from '../../components/ViewProfile/ViewProfile';
 import * as statsAPI from '../../../utilities/stats-api';
 
 

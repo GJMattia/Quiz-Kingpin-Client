@@ -1,9 +1,9 @@
 import './ProfilePage.css';
 import { useState, useEffect } from 'react';
-import ProfileHeader from '../../Components/ProfileHeader/ProfileHeader';
-import ProfileStats from '../../Components/ProfileStats/ProfileStats';
-import ProfileQuestions from '../../Components/ProfileQuestions/ProfileQuestions';
-import CreateQuestion from '../../Components/CreateQuestion/CreateQuestion';
+import ProfileHeader from '../../components/ProfileHeader/ProfileHeader';
+import ProfileStats from '../../components/ProfileStats/ProfileStats';
+import ProfileQuestions from '../../components/ProfileQuestions/ProfileQuestions';
+import CreateQuestion from '../../components/CreateQuestion/CreateQuestion';
 import * as questionsAPI from '../../../utilities/questions-api';
 import * as statsAPI from '../../../utilities/stats-api';
 

@@ -1,9 +1,9 @@
 import './PlayPage.css';
 import { useState } from 'react';
-import GameModes from '../../Components/GameModes/GameModes';
-import QuizCategories from '../../Components/QuizCategories/QuizCategories';
-import Quiz from '../../Components/Quiz/Quiz';
-import QuizResults from '../../Components/QuizResults/QuizResults';
+import GameModes from '../../components/GameModes/GameModes';
+import QuizCategories from '../../components/QuizCategories/QuizCategories';
+import Quiz from '../../components/Quiz/Quiz';
+import QuizResults from '../../components/QuizResults/QuizResults';
 
 
 
