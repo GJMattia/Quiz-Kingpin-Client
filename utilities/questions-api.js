@@ -1,6 +1,8 @@
 import sendRequest from "./send-request";
 const BASE_URL = 'http://localhost:4741/questions';
 
+// let BASE_URL = 'https://quiz-kingpin-api.onrender.com/questions';
+
 
 
 export async function getAll() {
