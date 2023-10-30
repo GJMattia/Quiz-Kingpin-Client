@@ -32,7 +32,6 @@ export default function PlayPage({ user, quizCompleted, setQuizCompleted }) {
 
     return (
         <>
-            <h1>hello {user.name}, select a gamemode to get started!</h1>
             {gameModesDiv && <GameModes handleGameMode={handleGameMode} />}
             {quizCategories && <QuizCategories gameMode={gameMode} setQuestionSet={setQuestionSet} quizCategories={quizCategories} setQuizCategories={setQuizCategories} quiz={quiz} setQuiz={setQuiz} />}
             {quiz && <Quiz user={user} gameMode={gameMode} questionSet={questionSet} score={score} setScore={setScore} quizResults={quizResults} setQuizResults={setQuizResults} quiz={quiz} setQuiz={setQuiz} />}

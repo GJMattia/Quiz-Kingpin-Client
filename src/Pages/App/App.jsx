@@ -6,6 +6,8 @@ import NavBar from '../../Components/NavBar/NavBar';
 import ProfilePage from '../ProfilePage/ProfilePage';
 import PlayPage from '../PlayPage/PlayPage';
 import KingpinPage from '../KingpinPage/KingpinPage';
+import AboutPage from '../AboutPage/AboutPage';
+import Footer from '../../Components/Footer/Footer';
 import './App.css';
 
 
@@ -13,7 +15,7 @@ function App() {
   const [user, setUser] = useState(getUser());
 
   return (
-    <main>
+    <>
       {user ?
         <>
           <NavBar user={user} setUser={setUser} />
@@ -21,11 +23,14 @@ function App() {
             <Route path='/' element={<ProfilePage user={user} />} />
             <Route path='/play' element={<PlayPage user={user} />} />
             <Route path='/kingpin' element={<KingpinPage user={user} />} />
+            <Route path='/about' element={<AboutPage user={user} />} />
           </Routes>
+          <Footer />
         </> :
         <AuthPage setUser={setUser} />
+
       }
-    </main>
+    </>
   )
 }
 

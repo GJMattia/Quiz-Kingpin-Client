@@ -1,9 +1,101 @@
-.NewQuestionForm {
+.QuestionDiv {
     display: flex;
-    width: 30rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid white;
+    width: 50%;
+    margin: 1rem;
+    border-radius: .5rem;
+    position: absolute;
+    top: 20%;
+    background: linear-gradient(to right, black, orangered);
+
+}
+
+.QuestionDiv>h2 {
+    color: white;
+    margin: 1rem;
+
+}
+
+.NewQuestionForm {
+    color: white;
+    display: flex;
+    width: 70%;
+    border-radius: .5rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aquamarine;
-    margin: 2rem;
+    margin-bottom: 1rem;
+
+
+}
+
+.NewQuestionForm>input,
+select {
+    font-size: 1.5rem;
+    height: 2rem;
+    width: 25rem;
+    margin: .5rem;
+    border-radius: .2rem;
+    border: 2px solid crimson;
+    font-family: 'Stat';
+}
+
+select {
+    text-align: center;
+    height: 3rem;
+}
+
+.NewQuestionForm>label {
+    font-size: 1.2rem;
+    color: white;
+    width: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    right: 7.5rem;
+    top: 1.5rem;
+}
+
+.NewQuestionForm>button {
+    width: 25rem;
+    height: 3rem;
+    margin-top: 2rem;
+    color: white;
+    font-family: 'Stat';
+    background: linear-gradient(to right, black, darkred);
+    font-size: 1.3rem;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: .2rem;
+}
+
+.NewQuestionForm>button:hover {
+    animation: pulse 1s infinite;
+    color: white;
+    background: linear-gradient(to right, black, red);
+}
+
+.Xout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: .5rem;
+    height: .5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 1px solid white;
+    background: linear-gradient(to right, black, darkred);
+    color: white;
+}
+
+.Xout:hover {
+    animation: pulse 1s infinite;
+    cursor: pointer;
+    border: 1px solid crimson;
 }

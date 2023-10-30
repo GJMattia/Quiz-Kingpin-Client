@@ -2,8 +2,16 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 40rem;
-    background-color: yellow;
+    width: 70%;
+    flex-wrap: wrap;
+    border: 2px solid crimson;
+    box-shadow: 0 0 30px rgba(255, 255, 255);
+    animation: pulse 5s infinite;
+    padding: 5rem;
+    margin-bottom: 3rem;
+    border-radius: .5rem;
+    background: linear-gradient(to right, black, rgb(30, 0, 0));
+
 }
 
 .GameMode {
@@ -11,7 +19,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: gainsboro;
-    width: 10rem;
+    width: 40%;
     height: 10rem;
+    border: 1px solid white;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    color: white;
+    background: linear-gradient(to right, black, darkred);
+    border-radius: .5rem;
+    font-size: 2rem;
+}
+
+.GameMode:hover {
+    animation: pulse 1s infinite;
+    cursor: pointer;
+    background: linear-gradient(to right, black, red);
+}
+
+.PageTitle {
+    color: white;
 }

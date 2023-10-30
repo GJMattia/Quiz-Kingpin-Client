@@ -3,7 +3,9 @@ import './ProfileQuestion.css';
 import * as questionsAPI from '../../../utilities/questions-api';
 
 
-export default function ProfileQuestion({ user, question, setProfileQuestions, setEditMode, editMode, editedQuestionData, setEditedQuestionData }) {
+export default function ProfileQuestion({ user, question, setProfileQuestions, setEditMode, editMode, editedQuestionData, setEditedQuestionData, createQuestionDiv, setCreateQuestionDiv }) {
+
+
 
     async function handleDelete() {
         await questionsAPI.deleteQuestion(question._id);
@@ -14,8 +16,8 @@ export default function ProfileQuestion({ user, question, setProfileQuestions, s
     async function activateEditMode() {
         setEditMode(!editMode);
         setEditedQuestionData(question);
-        console.log(editMode);
-        console.log(editedQuestionData)
+        setCreateQuestionDiv(!createQuestionDiv);
+
     }
 
 
@@ -38,8 +40,8 @@ export default function ProfileQuestion({ user, question, setProfileQuestions, s
                         <td>{question.category}</td>
                         <td>{question.correct}</td>
                         <td>{question.incorrect}</td>
-                        <td><button onClick={activateEditMode}>Edit</button></td>
-                        <td><button onClick={handleDelete}>Delete</button></td>
+                        <td><button className='QuestionButton' onClick={activateEditMode}>Edit</button></td>
+                        <td><button className='QuestionButton' onClick={handleDelete}>Delete</button></td>
                     </tr>
                 </tbody>
             </table>

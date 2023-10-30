@@ -1,4 +1,12 @@
 .LeaderboardTable {
+    margin-top: 2rem;
+    width: 80%;
     text-align: center;
-    background-color: dodgerblue;
+    background: linear-gradient(to right, black, darkred);
+    border: 1px solid white;
+    color: white;
+}
+
+.LeaderboardTable>thead>tr>th {
+    text-decoration: underline;
 }

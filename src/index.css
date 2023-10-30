@@ -1,18 +1,29 @@
+@font-face {
+    font-family: 'Aladin';
+    src: url('./assets/fonts/Aladin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Stat';
+    src: url('./assets/fonts/Stat.ttf') format('truetype');
+}
+
 html {
+    font-family: 'Aladin';
     width: 100%;
     height: 100%;
 }
 
 #root {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     display: flex;
     width: 100%;
-    height: 100%;
+
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    background: linear-gradient(to right, black, rgb(255, 197, 197));
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(41, 0, 0));
     background-repeat: no-repeat;
     background-size: cover;
 }

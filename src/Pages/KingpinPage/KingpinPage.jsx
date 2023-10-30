@@ -32,11 +32,11 @@ export default function KingpinPage() {
 
 
     return (
-        <>
+        <div className='StatDiv'>
             <h1>Stats</h1>
             <LeaderboardOptions category={category} setCategory={setCategory} leaderboardData={leaderboardData} setLeaderboardData={setLeaderboardData} />
             {leaderboardData && <Leaderboard leaderboardData={leaderboardData} category={category} stats={stats} setStats={setStats} />}
             <ViewProfile stats={stats} />
-        </>
+        </div>
     )
 };

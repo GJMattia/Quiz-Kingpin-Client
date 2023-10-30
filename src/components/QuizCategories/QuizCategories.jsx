@@ -35,11 +35,14 @@ export default function QuizCategories({ gameMode, setQuestionSet, quizCategorie
 
 
     return (
-        <div className='Categories'>
-            <div className='Category' onClick={gameMode === '0' ? getUserQuestions : gameMode === '1' ? getExternalQuestions : null} value='27'>Animals</div>
-            <div className='Category' onClick={gameMode === '0' ? getUserQuestions : gameMode === '1' ? getExternalQuestions : null} value='23'>History</div>
-            <div className='Category' onClick={gameMode === '0' ? getUserQuestions : gameMode === '1' ? getExternalQuestions : null} value='21'>Sports</div>
-        </div>
+        <>
+            <h1 className='PageTitle'>Please select your quiz category!</h1>
+            <div className='Categories'>
+                <div className='Category' onClick={gameMode === '0' ? getUserQuestions : gameMode === '1' ? getExternalQuestions : null} value='27'>Animals</div>
+                <div className='Category' onClick={gameMode === '0' ? getUserQuestions : gameMode === '1' ? getExternalQuestions : null} value='23'>History</div>
+                <div className='Category' onClick={gameMode === '0' ? getUserQuestions : gameMode === '1' ? getExternalQuestions : null} value='21'>Sports</div>
+            </div>
+        </>
 
     )
 }

@@ -5,8 +5,9 @@ export default function ProfileStats({ user, stats, setStats }) {
 
     function statAverage(array) {
         if (array.length === 0) {
-            return 'Sauce'
-        }
+            return 'N/A'
+        };
+
         let total = 0;
         for (let i = 0; i < array.length; i++) {
             total += array[i];
@@ -16,7 +17,8 @@ export default function ProfileStats({ user, stats, setStats }) {
     }
 
     return (
-        <div className='ProfileStats'>
+        <div className='StatsDiv'>
+            <h2>Stats</h2>
             <table className='StatsTable'>
                 <thead>
                     <tr>
@@ -43,7 +45,6 @@ export default function ProfileStats({ user, stats, setStats }) {
                     </tr>
                 </tbody>
             </table>
-
         </div>
     )
 }

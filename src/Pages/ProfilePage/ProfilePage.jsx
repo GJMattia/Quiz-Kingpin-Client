@@ -14,6 +14,7 @@ export default function Profile({ user }) {
     const [editMode, setEditMode] = useState(false);
     const [editedQuestionData, setEditedQuestionData] = useState({});
     const [stats, setStats] = useState(null);
+    const [createQuestionDiv, setCreateQuestionDiv] = useState(false);
 
 
     useEffect(function () {
@@ -45,8 +46,8 @@ export default function Profile({ user }) {
         <div className='ProfileDiv'>
             <ProfileHeader user={user} />
             {stats && <ProfileStats user={user} stats={stats} setStats={setStats} />}
-            {profileQuestions && <ProfileQuestions user={user} profileQuestions={profileQuestions} setProfileQuestions={setProfileQuestions} setEditMode={setEditMode} editMode={editMode} editedQuestionData={editedQuestionData} setEditedQuestionData={setEditedQuestionData} />}
-            <CreateQuestion user={user} setProfileQuestions={setProfileQuestions} setEditMode={setEditMode} editMode={editMode} editedQuestionData={editedQuestionData} setEditedQuestionData={setEditedQuestionData} />
+            {profileQuestions && <ProfileQuestions user={user} profileQuestions={profileQuestions} setProfileQuestions={setProfileQuestions} setEditMode={setEditMode} editMode={editMode} editedQuestionData={editedQuestionData} setEditedQuestionData={setEditedQuestionData} createQuestionDiv={createQuestionDiv} setCreateQuestionDiv={setCreateQuestionDiv} />}
+            {createQuestionDiv && <CreateQuestion user={user} setProfileQuestions={setProfileQuestions} setEditMode={setEditMode} editMode={editMode} editedQuestionData={editedQuestionData} setEditedQuestionData={setEditedQuestionData} createQuestionDiv={createQuestionDiv} setCreateQuestionDiv={setCreateQuestionDiv} />}
         </div>
 
     )

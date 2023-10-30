@@ -3,22 +3,29 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 25rem;
+    width: 70%;
     height: 5rem;
-    background-color: lawngreen;
+    border: 1px solid white;
+    border-radius: .5rem;
     margin: 1rem;
+    padding: .5rem;
 }
 
 .LeaderboardOption {
-    background-color: crimson;
-    padding: .5rem;
+    text-align: center;
+    width: 8rem;
+    color: white;
+    border-radius: .5rem;
+    border: 1px solid white;
+    background: linear-gradient(to right, black, darkred);
+    padding: 1rem;
 }
 
 .LeaderboardOption:hover {
     cursor: pointer;
-    background-color: dodgerblue;
+    background: linear-gradient(to right, black, red);
 }
 
 .Selected {
-    background-color: darkorange;
+    background: linear-gradient(to right, black, orangered);
 }

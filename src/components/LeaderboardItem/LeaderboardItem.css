@@ -1,0 +1,7 @@
+.ProfileLink {
+    cursor: pointer;
+}
+
+.ProfileLink:hover {
+    color: orange;
+}

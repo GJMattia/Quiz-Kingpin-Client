@@ -1,20 +1,44 @@
-.ProfileStats {
+.StatsDiv {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    width: 50rem;
-    background-color: lightblue;
+    width: 80%;
+    border: 1px solid white;
+    margin: 1rem;
+    border-radius: .5rem;
+}
+
+.StatsDiv>h2 {
+
+    margin: 1rem;
+    color: white;
+    text-transform: capitalize;
 }
 
 .StatsTable {
-    padding: 1rem;
+    width: 80%;
     text-align: center;
-    margin: 1rem;
-    background-color: lightyellow;
+    color: white;
+    border: 1px solid white;
+    border-radius: .5rem;
+    margin-bottom: 2rem;
 }
 
-.StatsTable>tbody>tr>td {
+.StatsTable>thead>tr>th {
+    background: linear-gradient(to right, black, crimson);
     width: 10rem;
-    background-color: lightskyblue;
-    padding: 1rem;
+    padding: .5rem;
+}
+
+
+
+.StatsTable>tbody>tr>td {
+    background: linear-gradient(to right, black, red);
+    width: 10rem;
+    padding: .5rem;
+}
+
+.StatsTable>tbody>tr>td:nth-child(even) {
+    background: linear-gradient(to right, black, rgb(251, 51, 51));
 }

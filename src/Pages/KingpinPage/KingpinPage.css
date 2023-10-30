@@ -1,0 +1,15 @@
+.StatDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2rem;
+    border: 1px solid crimson;
+    width: 70%;
+    animation: pulse 5s infinite;
+    border-radius: .5rem;
+}
+
+.StatDiv>h1 {
+    color: white;
+}

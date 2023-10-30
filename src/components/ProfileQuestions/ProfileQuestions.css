@@ -3,9 +3,17 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: lightgreen;
-    width: 50rem;
+    border: 1px solid white;
+    border-radius: .5rem;
+    width: 85%;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
 
+.ProfileQuestions>h2 {
+    text-transform: capitalize;
+    margin: 0;
 }
 
 .Questions {
@@ -13,8 +21,25 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 40rem;
-    background-color: lightpink;
+    width: 100%;
     padding: 0;
     list-style: none;
+}
+
+.AddQuestion {
+    color: white;
+    background: linear-gradient(to right, black, darkred);
+    font-size: 1.5rem;
+    font-family: 'Stat';
+    width: 15rem;
+    height: 3rem;
+    border: 1px solid white;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+
+.AddQuestion:hover {
+    background: linear-gradient(to right, black, red);
+    cursor: pointer;
+    animation: pulse 1s infinite;
 }

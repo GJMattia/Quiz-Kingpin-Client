@@ -2,8 +2,13 @@ import { useState } from 'react';
 import './CreateQuestion.css'
 import * as questionsAPI from '../../../utilities/questions-api';
 
-export default function CreateQuestion({ user, setProfileQuestions, editMode, setEditMode, editedQuestionData, setEditedQuestionData }) {
+export default function CreateQuestion({ user, setProfileQuestions, editMode, setEditMode, editedQuestionData, setEditedQuestionData, createQuestionDiv, setCreateQuestionDiv }) {
 
+
+    function xOut() {
+        setEditMode(false);
+        setCreateQuestionDiv(!createQuestionDiv);
+    };
 
     const [questionData, setQuestionData] = useState({
         user: user._id,
@@ -29,6 +34,7 @@ export default function CreateQuestion({ user, setProfileQuestions, editMode, se
         } catch (error) {
             console.error('error creating note'.error)
         }
+        setCreateQuestionDiv(!createQuestionDiv);
     };
 
     function handleInputChange(event) {
@@ -80,6 +86,7 @@ export default function CreateQuestion({ user, setProfileQuestions, editMode, se
             setProfileQuestions(updatedProfileQuestions);
             setEditMode(!editMode);
             setEditedQuestionData({});
+            setCreateQuestionDiv(!createQuestionDiv);
 
         } catch (error) {
             console.error('error creating note'.error)
@@ -88,8 +95,9 @@ export default function CreateQuestion({ user, setProfileQuestions, editMode, se
 
 
     return (
-        <>
-            <h1>{editMode ? "Edit Question" : "Create New Question"}</h1>
+        <div className='QuestionDiv'>
+            <div onClick={xOut} className='Xout'>X</div>
+            <h2>{editMode ? "Edit Question" : "Create New Question"}</h2>
             <form className='NewQuestionForm' onSubmit={editMode ? editQuestion : addQuestion}>
                 <label>Category</label>
                 <select name="category" onChange={handleInputChange} value={editMode ? editedQuestionData.category : questionData.category}>
@@ -123,6 +131,6 @@ export default function CreateQuestion({ user, setProfileQuestions, editMode, se
                     ))}
                 <button type="submit">{editMode ? "Edit Question" : "Add Question"}</button>
             </form>
-        </>
+        </div>
     );
 }

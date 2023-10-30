@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom'
-import * as userService from '../../../utilities/user-services'
+import { NavLink } from 'react-router-dom';
+import * as userService from '../../../utilities/user-services';
+import './NavBar.css';
 
 export default function NavBar({ user, setUser }) {
   function handleLogOut() {
@@ -8,16 +9,37 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    <nav>
-      <Link to='/'>Profile</Link>
-      &nbsp;&nbsp;
-      <Link to='/play'>Play</Link>
-      &nbsp;&nbsp;
-      <Link to='/kingpin'>Kingpin</Link>
-      &nbsp;&nbsp;
-      <Link to='/'>About</Link>
-      &nbsp;&nbsp;
-      <Link to='' onClick={handleLogOut}>Log Out</Link>
-    </nav>
-  );
+    <div className='NavBar'>
+      <ul className='NavList'>
+        <li>
+          <NavLink className='underline' activeclassname='active' to='/play' exact>
+            Play!
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className='underline' activeclassname='active' to='/' exact>
+            Profile
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className='underline' activeclassname='active' to='/kingpin' exact>
+            Kingpins
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className='underline' activeclassname='active' to='/about' exact>
+            About
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className='underline' to='' onClick={handleLogOut} exact>
+            Sign Out
+          </NavLink>
+        </li>
+
+
+      </ul>
+    </div>
+  )
 }
+

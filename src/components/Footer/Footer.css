@@ -1,0 +1,26 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-top: 2px solid crimson;
+    box-shadow: 0 0 30px rgba(255, 255, 255);
+    animation: pulse 5s infinite;
+    background-color: black;
+}
+
+footer>ul {
+    list-style: none;
+    display: flex;
+}
+
+footer>ul>li {
+    color: white;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+footer>ul>li>a {
+    color: white;
+    text-decoration: none;
+}

@@ -3,7 +3,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 5rem;
-    width: 50rem;
-    background-color: crimson;
+    margin: 2rem;
+    width: 60%;
+    padding: 1rem;
+    border: 1px solid crimson;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+    animation: pulse 5s infinite;
+    border-radius: .5rem;
 }

@@ -31,7 +31,7 @@ export default function LeaderboardItem({ data, category, index, stats, setStats
             <td>{index + 1}</td>
             <td>{data.user.name}</td>
             <td>{statAverage(data[category])}%</td>
-            <td onClick={getSelectedStats}>{data.user._id}</td>
+            <td className='ProfileLink' onClick={getSelectedStats}>View</td>
         </tr>
     )
 };
