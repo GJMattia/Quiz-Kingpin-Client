@@ -19,9 +19,11 @@
 
 
 .QuestionButton {
+    text-align: center;
     font-family: 'Stat';
     border: 1px solid white;
-    background-color: rgb(240, 64, 0);
+    color: black;
+    background-color: orangered;
     width: 3.5rem;
     font-size: 1rem;
     border-radius: .2rem;
