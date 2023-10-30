@@ -2,7 +2,7 @@ import './LeaderboardItem.css';
 import * as statsAPI from '../../../utilities/stats-api';
 
 
-export default function LeaderboardItem({ data, category, index, stats, setStats }) {
+export default function LeaderboardItem({ data, category, index, stats, setStats, setViewProfileDiv }) {
 
 
     function statAverage(array) {
@@ -21,6 +21,7 @@ export default function LeaderboardItem({ data, category, index, stats, setStats
         try {
             const stats = await statsAPI.getSelectedStats({ selectedID: data.user._id });
             setStats(stats);
+            setViewProfileDiv(true);
         } catch (error) {
             console.error('Error Fetching Questions', error);
         }

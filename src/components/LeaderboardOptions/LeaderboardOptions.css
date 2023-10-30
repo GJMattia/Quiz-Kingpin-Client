@@ -22,10 +22,12 @@
 }
 
 .LeaderboardOption:hover {
+    animation: pulse 1s infinite;
     cursor: pointer;
     background: linear-gradient(to right, black, red);
 }
 
 .Selected {
+    animation: pulse 1s infinite;
     background: linear-gradient(to right, black, orangered);
 }

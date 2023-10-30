@@ -8,6 +8,7 @@ import * as statsAPI from '../../../utilities/stats-api';
 
 export default function KingpinPage() {
 
+    const [viewProfileDiv, setViewProfileDiv] = useState(false);
     const [leaderboardData, setLeaderboardData] = useState(null);
     const [category, setCategory] = useState('overall');
     const [stats, setStats] = useState({
@@ -35,8 +36,8 @@ export default function KingpinPage() {
         <div className='StatDiv'>
             <h1>Stats</h1>
             <LeaderboardOptions category={category} setCategory={setCategory} leaderboardData={leaderboardData} setLeaderboardData={setLeaderboardData} />
-            {leaderboardData && <Leaderboard leaderboardData={leaderboardData} category={category} stats={stats} setStats={setStats} />}
-            <ViewProfile stats={stats} />
+            {leaderboardData && <Leaderboard leaderboardData={leaderboardData} category={category} stats={stats} setStats={setStats} setViewProfileDiv={setViewProfileDiv} />}
+            {viewProfileDiv && <ViewProfile stats={stats} setViewProfileDiv={setViewProfileDiv} />}
         </div>
     )
 };

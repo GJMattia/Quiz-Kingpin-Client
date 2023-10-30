@@ -8,6 +8,8 @@
     width: 70%;
     animation: pulse 5s infinite;
     border-radius: .5rem;
+    position: relative;
+    margin-bottom: 15rem;
 }
 
 .StatDiv>h1 {

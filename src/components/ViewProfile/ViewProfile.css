@@ -1,9 +1,43 @@
 .ProfileView {
+    width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin-top: 4rem;
-    background-color: red;
+    background: linear-gradient(to right, black, rgb(77, 0, 0));
+    border: 1px solid white;
+    border-radius: .5rem;
     padding: 1rem;
+    position: absolute;
+    top: -3rem;
+}
+
+
+.ProfileView>h1 {
+    font-family: 'Stat';
+    text-align: center;
+    border: 1px solid white;
+    width: 90%;
+    margin: 0;
+    border-radius: .5rem;
+}
+
+.CloseProfile {
+    color: white;
+    background: linear-gradient(to right, black, darkred);
+    font-size: 1.5rem;
+    font-family: 'Stat';
+    width: 15rem;
+    height: 3rem;
+    border: 1px solid white;
+    border-radius: .5rem;
+    margin: 1rem;
+
+}
+
+.CloseProfile:hover {
+    background: linear-gradient(to right, black, red);
+    cursor: pointer;
+    animation: pulse 1s infinite;
 }
