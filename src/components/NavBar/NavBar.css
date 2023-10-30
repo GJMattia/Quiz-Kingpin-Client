@@ -6,6 +6,7 @@
     border-bottom: 2px solid crimson;
     box-shadow: 0 0 30px rgb(0, 0, 0);
     animation: pulse 5s infinite;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 @keyframes pulse {

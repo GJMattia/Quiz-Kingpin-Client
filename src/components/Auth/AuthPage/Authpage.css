@@ -1,0 +1,55 @@
+.QuizKP {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            #5c85ff 0%,
+            #02e6ff 29%,
+            #ff9b9b 67%,
+            #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 7rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+
+
+.LogDiv {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    border: 1px solid crimson;
+    animation: pulse 5s infinite;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: .5rem;
+}
+
+
+.LogDiv>button {
+    width: 10rem;
+    height: 2.5rem;
+    color: black;
+    background-color: white;
+    font-size: 1.3rem;
+    border: 1px solid crimson;
+    box-shadow: 0 0 10px rgba(255, 255, 255);
+    animation: pulse 2s infinite;
+    cursor: pointer;
+    border-radius: .2rem;
+    font-family: 'Aladin';
+}
+
+.LogDiv>button:hover {
+    color: white;
+    background-color: black;
+}

@@ -17,7 +17,7 @@ export default function NavBar({ user, setUser }) {
           </NavLink>
         </li>
         <li>
-          <NavLink className='underline' activeclassname='active' to='/' exact>
+          <NavLink className='underline' activeclassname='active' to='/profile' exact>
             Profile
           </NavLink>
         </li>

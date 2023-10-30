@@ -20,15 +20,17 @@ function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path='/' element={<ProfilePage user={user} />} />
+            <Route path='/profile' element={<ProfilePage user={user} />} />
             <Route path='/play' element={<PlayPage user={user} />} />
             <Route path='/kingpin' element={<KingpinPage user={user} />} />
             <Route path='/about' element={<AboutPage user={user} />} />
           </Routes>
           <Footer />
         </> :
-        <AuthPage setUser={setUser} />
-
+        <>
+          <AuthPage setUser={setUser} />
+          <Footer />
+        </>
       }
     </>
   )

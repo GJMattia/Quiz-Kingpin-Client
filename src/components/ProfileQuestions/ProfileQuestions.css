@@ -5,15 +5,15 @@
     align-items: center;
     border: 1px solid white;
     border-radius: .5rem;
-    width: 85%;
+    width: 80%;
     color: white;
-    padding: 1rem;
     margin-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .ProfileQuestions>h2 {
     text-transform: capitalize;
-    margin: 0;
+    margin: 1rem;
 }
 
 .Questions {
@@ -24,13 +24,14 @@
     width: 100%;
     padding: 0;
     list-style: none;
+    margin-top: 0;
 }
 
 .AddQuestion {
     color: white;
     background: linear-gradient(to right, black, darkred);
     font-size: 1.5rem;
-    font-family: 'Stat';
+    font-family: 'Aladin';
     width: 15rem;
     height: 3rem;
     border: 1px solid white;

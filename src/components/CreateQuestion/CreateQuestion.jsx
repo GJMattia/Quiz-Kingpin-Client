@@ -99,17 +99,17 @@ export default function CreateQuestion({ user, setProfileQuestions, editMode, se
             <div onClick={xOut} className='Xout'>X</div>
             <h2>{editMode ? "Edit Question" : "Create New Question"}</h2>
             <form className='NewQuestionForm' onSubmit={editMode ? editQuestion : addQuestion}>
-                <label>Category</label>
+                <label>Category*</label>
                 <select name="category" onChange={handleInputChange} value={editMode ? editedQuestionData.category : questionData.category}>
                     <option value="Animals">Animals</option>
                     <option value="History">History</option>
                     <option value="Sports">Sports</option>
                 </select>
-                <label>Question</label>
+                <label>Question*</label>
                 <input name="question" onChange={handleInputChange} value={editMode ? editedQuestionData.question : questionData.question} />
-                <label>Correct Answer</label>
+                <label>Correct Answer*</label>
                 <input name="correct_answer" onChange={handleInputChange} value={editMode ? editedQuestionData.correct_answer : questionData.correct_answer} />
-                <label>Incorrect Answers</label>
+                <label>Incorrect Answers*</label>
                 {editMode
                     ? editedQuestionData.incorrect_answers.map((answer, index) => (
                         <input

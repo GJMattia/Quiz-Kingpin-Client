@@ -3,13 +3,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 85%;
+    width: 50%;
     height: 5rem;
     border: 1px solid white;
     margin: 1rem;
     color: white;
     border-radius: .5rem;
-    background: linear-gradient(to right, black, darkred);
+    animation: pulse 1s infinite;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .Username {

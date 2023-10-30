@@ -6,8 +6,8 @@ export default function QuizResults({ score }) {
 
     return (
         <div className='Results'>
-            <h1 className='PageTitle'>You scored {score}/100!</h1>
-            <Link className='Return' to='/'>Return To Profile</Link>
+            <h1 className='ResultsTitle'>You scored {score}/100!</h1>
+            <Link className='Return' to='/profile'>Return To Profile</Link>
 
         </div>
     )

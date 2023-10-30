@@ -3,6 +3,7 @@
 }
 
 .QuestionTable {
+    border-radius: .3rem;
     width: 100%;
     text-align: center;
     border: 1px solid white;
@@ -16,6 +17,7 @@
     text-decoration: underline;
 }
 
+
 .QuestionButton {
     font-family: 'Stat';
     border: 1px solid white;
@@ -26,6 +28,8 @@
 }
 
 .QuestionButton:hover {
+    animation: pulse 1s infinite;
+    color: white;
     background-color: red;
     cursor: pointer;
 }

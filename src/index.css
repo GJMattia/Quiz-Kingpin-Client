@@ -11,25 +11,277 @@
 html {
     font-family: 'Aladin';
     width: 100%;
-    height: 100%;
 }
 
 #root {
     font-size: 1.5rem;
     display: flex;
     width: 100%;
-
+    height: 100%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    background: linear-gradient(to right, rgb(0, 0, 0), rgb(41, 0, 0));
+    background-image: url('./assets/pictures/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 body {
     width: 100%;
-    height: 100%;
     margin: 0;
+}
+
+/* //Media Queries */
+
+@media (max-width: 1000px) {
+
+    /* //Footer */
+
+    footer>ul {
+        flex-direction: column;
+        font-size: 1.3rem;
+    }
+
+
+    /* //Nav Bar */
+    .NavList {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    a.underline::after {
+        bottom: 0px;
+
+    }
+
+    /* //Login Page */
+
+    .QuizKP {
+        text-align: center;
+    }
+
+    .LogDiv {
+        width: 90%;
+    }
+
+    .LogDiv>button {
+        width: 5rem;
+    }
+
+    .LoginDiv {
+        width: 90%;
+    }
+
+    .FormContainer>input {
+        width: 90%;
+    }
+
+    .FormContainer>label {
+        right: 7rem;
+    }
+
+    .PageTitle {
+        font-size: 2rem;
+        width: 80%;
+    }
+
+    /* //Quiz Page */
+
+    .GameModes {
+        width: 90%;
+    }
+
+    .GameMode {
+        margin: 1rem;
+        font-size: 1.3rem;
+        width: 80%;
+        height: 2rem;
+    }
+
+
+    /* Quiz Page */
+
+    .QuizContainer {
+        width: 95%;
+        padding: 0;
+        margin: 1rem;
+    }
+
+    .QuestionContainer {
+        border: 1px solid white;
+        width: 85%;
+    }
+
+    .QuestionText {
+        font-size: 1.3rem;
+    }
+
+
+    .Answers {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .QuestionNumber {
+        font-size: 1.3rem;
+    }
+
+    .Answer {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        padding: 0;
+        width: 90%;
+        height: 3rem;
+    }
+
+    .Confirm {
+        height: 3rem;
+        font-size: 1.5rem;
+        width: 80%;
+    }
+
+    .Results {
+        font-size: 1.3rem;
+        width: 95%;
+    }
+
+    .Return {
+        font-size: 1.3rem;
+        width: 70%;
+    }
+
+    /* Profile */
+
+    .ProfileDiv {
+        width: 95%;
+        padding: 0;
+
+    }
+
+    .ProfileHeader {
+        width: 90%;
+    }
+
+    .Username {
+        font-size: 3rem;
+
+    }
+
+    .StatsDiv {
+        margin-top: 1;
+        width: 95%;
+    }
+
+    .StatsTable {
+        font-size: 1rem;
+        width: 90%;
+    }
+
+
+    .ProfileQuestions {
+        width: 95%;
+    }
+
+    .QuestionTable> {
+        margin: 0;
+        padding: 0;
+        width: 95%;
+    }
+
+    .QuestionTable>thead>tr>th {
+        font-size: 1rem;
+        padding: 0rem;
+        color: white;
+        width: 1rem;
+        text-decoration: underline;
+    }
+
+    .QuestionTable>tbody>tr>td {
+        font-size: 1rem;
+        color: white;
+        width: 4rem;
+
+    }
+
+    .QuestionButton {
+        font-size: 1rem;
+    }
+
+    .AddQuestion {
+        font-size: 1.3rem;
+        width: 70%;
+    }
+
+
+    /* //Create New Quesiton / Edit */
+
+
+    .QuestionDiv {
+        top: 0;
+        width: 100%;
+    }
+
+    .QuestionDiv>h2 {
+        font-size: 2rem;
+    }
+
+    .NewQuestionForm {
+        width: 100%;
+    }
+
+    .NewQuestionForm>input {
+        width: 80%;
+    }
+
+    select {
+        width: 80%;
+    }
+
+    .NewQuestionForm>label {
+        right: 4rem;
+    }
+
+    .NewQuestionForm>button {
+        width: 80%;
+    }
+
+
+    .StatDiv {
+        width: 95%;
+    }
+
+    .LeaderboardOptionsDiv {
+        padding: 0;
+        width: 95%;
+    }
+
+    .LeaderboardOption {
+        font-size: 1rem;
+        width: 10%;
+        height: 1rem;
+    }
+
+    .LeaderboardTable {
+        width: 95%;
+        font-size: 1rem;
+    }
+
+    .ProfileView {
+        width: 95%;
+    }
+
+    /* //About Page */
+
+    .AboutPage {
+        width: 95%;
+    }
+
+    .AboutPage>p {
+        width: 80%;
+    }
 }

@@ -1,0 +1,72 @@
+.LoginDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid crimson;
+    animation: pulse 5s infinite;
+    border-radius: .5rem;
+}
+
+.LoginDiv>p {
+    color: whitesmoke;
+}
+
+.FormContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ContactDiv>h1 {
+    color: white;
+}
+
+
+.FormContainer>input {
+    font-family: 'Aladin';
+    font-size: 1.5rem;
+    height: 2rem;
+    width: 25rem;
+    margin: 1rem;
+    border-radius: .2rem;
+    border: 1px solid crimson;
+
+}
+
+.FormContainer>label {
+    font-size: 1.5rem;
+    color: white;
+    width: 5rem;
+    margin-top: .5rem;
+    margin-bottom: .51rem;
+    position: relative;
+    right: 10rem;
+    top: 1.5rem;
+}
+
+
+.FormContainer>button {
+    width: 20rem;
+    height: 3rem;
+    margin-top: 3rem;
+    color: black;
+    background-color: white;
+    font-size: 1.3rem;
+    border: 1px solid crimson;
+    box-shadow: 0 0 10px rgba(255, 255, 255);
+    animation: pulse 2s infinite;
+    cursor: pointer;
+    border-radius: .2rem;
+    font-family: 'Aladin';
+}
+
+.FormContainer>button:hover {
+    color: white;
+    background-color: black;
+}

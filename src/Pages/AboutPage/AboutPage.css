@@ -1,0 +1,38 @@
+.AboutPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 1px solid crimson;
+    border-radius: .5rem;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    animation: pulse 5s infinite;
+}
+
+.AboutPage>p {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 0;
+    width: 60%;
+}
+
+.PlayButton {
+    background-color: white;
+    margin: 2rem;
+    width: 15rem;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: .5rem;
+    border: 1px solid crimson;
+    animation: pulse 5s infinite;
+}
+
+.PlayButton:hover {
+    animation: pulse 1s infinite;
+    color: white;
+    background-color: black;
+}

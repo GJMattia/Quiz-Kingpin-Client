@@ -4,15 +4,15 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    width: 70%;
+    width: 60%;
     border: 2px solid crimson;
     box-shadow: 0 0 30px rgba(255, 255, 255);
     animation: pulse 5s infinite;
     padding: 4rem;
     margin-top: 1rem;
-    margin-bottom: 5rem;
     border-radius: .5rem;
-    background: linear-gradient(to right, black, rgb(30, 0, 0));
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
 }
 
 .Category {

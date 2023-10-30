@@ -1,5 +1,8 @@
 import sendRequest from "./send-request";
-const BASE_URL = 'http://localhost:4741/stats';
+// const BASE_URL = 'http://localhost:4741/stats';
+
+let BASE_URL = 'https://quiz-kingpin-api.onrender.com/stats';
+
 
 export async function getSelectedStats({ selectedID }) {
     console.log(selectedID);

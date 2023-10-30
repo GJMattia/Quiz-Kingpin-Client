@@ -1,10 +1,11 @@
 .LeaderboardTable {
     margin: 2rem;
-    width: 80%;
+    width: 70%;
     text-align: center;
-    background: linear-gradient(to right, black, darkred);
     border: 1px solid white;
     color: white;
+    border-radius: .5rem;
+
 }
 
 .LeaderboardTable>thead>tr>th {
