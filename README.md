@@ -15,6 +15,7 @@ Quiz Kingpin is a game that allows you to participate in quizzes across various 
 - Javascript
 - HTML
 - CSS
+- https://opentdb.com/api_config.php (Questions API)
 
 ## Getting Started
 
