@@ -18,7 +18,11 @@ Quiz Kingpin is a game that allows you to participate in quizzes across various 
 
 ## Getting Started
 
-Click here to play. [Quiz Kingpin](https://quiz-kingpin-client.onrender.com/)
+
+[Trelloboard](https://trello.com/b/PNvvclFJ/quizkingpin)
+
+Click here to play:
+[Quiz Kingpin](https://quiz-kingpin-client.onrender.com/)
 
 Instructions:
 
