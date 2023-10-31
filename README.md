@@ -2,8 +2,10 @@
 
 Quiz Kingpin is a game that allows you to participate in quizzes across various categories. Your performance statistics are tracked, and you can view the achievements of fellow players while also contributing your own questions and monitoring their progress.
 
+![Quiz Kingpin Landing Page](/src/assets/pictures/0QP.png)
 ![Quiz Kingpin Gameplay](/src/assets/pictures/1QP.png)
 ![Quiz Kingpin Profile](/src/assets/pictures/2QP.png)
+![Quiz Kingpin Leaderboard](/src/assets/pictures/3QP.png)
 
 ## Technology Used
 

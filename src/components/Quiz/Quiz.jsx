@@ -16,7 +16,7 @@ export default function Quiz({ user, gameMode, questionSet, score, setScore, qui
 
     //build in function for parsing api data and converting to readable html
     function HTMLDecode(input) {
-        var doc = new DOMParser().parseFromString(input, "text/html");
+        let doc = new DOMParser().parseFromString(input, "text/html");
         return doc.documentElement.textContent;
     }
 
@@ -126,8 +126,6 @@ export default function Quiz({ user, gameMode, questionSet, score, setScore, qui
             setButton(!button);
         }
     };
-
-
 
 
     return (
