@@ -23,7 +23,7 @@ function App() {
             <Route path='/profile' element={<ProfilePage user={user} />} />
             <Route path='/play' element={<PlayPage user={user} />} />
             <Route path='/kingpin' element={<KingpinPage user={user} />} />
-            <Route path='/about' element={<AboutPage user={user} />} />
+            <Route path='/' element={<AboutPage user={user} />} />
           </Routes>
           <Footer />
         </> :

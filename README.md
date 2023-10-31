@@ -1,8 +1,38 @@
-# React + Vite
+# QUIZ KINGPIN
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Quiz Kingpin is a game that allows you to participate in quizzes across various categories. Your performance statistics are tracked, and you can view the achievements of fellow players while also contributing your own questions and monitoring their progress.
 
-Currently, two official plugins are available:
+![Quiz Kingpin Gameplay](/src/assets/pictures/1QP.png)
+![Quiz Kingpin Profile](/src/assets/pictures/2QP.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technology Used
+
+- React
+- Mongoose
+- MongoDB
+- Node.js
+- Express
+- Javascript
+- HTML
+- CSS
+
+## Getting Started
+
+Click here to play. [Quiz Kingpin](https://quiz-kingpin-client.onrender.com/)
+
+Instructions:
+
+- Create an account or sign in.
+- Click the play button in the navication bar, pick your categories and do the best you can.
+- View your profile to track your stats, or add a new question.
+- View other peoples stats in the Kingpin section of the navigation bar.
+
+## Future Updates
+
+Version 2
+
+- 1v1 Quizs against other players
+- More categories
+- Ability to add profile picture
+- Sound and music
+

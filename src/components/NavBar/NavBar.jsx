@@ -27,12 +27,12 @@ export default function NavBar({ user, setUser }) {
           </NavLink>
         </li>
         <li>
-          <NavLink className='underline' activeclassname='active' to='/about' exact>
+          <NavLink className='underline' activeclassname='active' to='/' exact>
             About
           </NavLink>
         </li>
         <li>
-          <NavLink className='underline' to='' onClick={handleLogOut} exact>
+          <NavLink to='' onClick={handleLogOut} exact>
             Sign Out
           </NavLink>
         </li>

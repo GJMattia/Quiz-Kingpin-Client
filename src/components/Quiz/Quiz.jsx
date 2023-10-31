@@ -53,7 +53,6 @@ export default function Quiz({ user, gameMode, questionSet, score, setScore, qui
     };
 
     async function markQuestionIncorrect() {
-        console.log('hello');
         try {
             let questionID = questionSet[currentQuestionIndex]._id;
             await questionsAPI.markQuestionIncorrect(questionID);
@@ -99,12 +98,10 @@ export default function Quiz({ user, gameMode, questionSet, score, setScore, qui
 
         if (answer === questionSet[currentQuestionIndex].correct_answer) {
             setScore(score + 20);
-            console.log('correct');
             if (gameMode == 0) {
                 markQuestionCorrect();
             };
         } else {
-            console.log('incorrect');
             if (gameMode == 0) {
                 markQuestionIncorrect();
             };

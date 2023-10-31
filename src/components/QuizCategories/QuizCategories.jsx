@@ -24,7 +24,6 @@ export default function QuizCategories({ gameMode, setQuestionSet, quizCategorie
         try {
             let category = event.target.innerText;
             const questionSet = await questionsAPI.getSet(category);
-            console.log(questionSet);
             setQuestionSet(questionSet);
             setQuizCategories(!quizCategories);
             setQuiz(!quiz);

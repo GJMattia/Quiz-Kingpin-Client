@@ -28,7 +28,6 @@ export default function PlayPage({ user, quizCompleted, setQuizCompleted }) {
         setGameMode(mode);
         setGameModesDiv(!gameModesDiv);
     }
-    console.log(questionSet)
 
     return (
         <>
